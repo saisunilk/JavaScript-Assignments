@@ -22,5 +22,14 @@
 */
 function nonrepeat(str) {
   // Your code here
+  const charCount = {};
+  for (const char of str) {
+    if (charCount[char]) {
+      charCount[char]++;
+    } else {
+      charCount[char] = 1;
+    }
+  }
+  return Object.keys(charCount).find(char => charCount[char] === 1) || null;
 }
 module.exports = nonrepeat;

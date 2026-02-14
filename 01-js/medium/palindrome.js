@@ -7,7 +7,41 @@
 */
 
 function isPalindrome(str) {
-    return true;
+    // Your code here
+   // Step 1: convert to lowercase
+  str = str.toLowerCase();
+
+  // Step 2: remove spaces and punctuation
+  var cleaned = "";
+
+  for (var i = 0; i < str.length; i++) {
+
+    var char = str[i];
+
+    // keep only letters and numbers
+    if (
+      (char >= 'a' && char <= 'z') ||
+      (char >= '0' && char <= '9')
+    ) {
+      cleaned += char;
+    }
+  }
+
+  // Step 3: check palindrome
+  var left = 0;
+  var right = cleaned.length - 1;
+
+  while (left < right) {
+
+    if (cleaned[left] !== cleaned[right]) {
+      return false;
+    }
+
+    left++;
+    right--;
+  }
+
+  return true;
 }
 
 module.exports = isPalindrome;

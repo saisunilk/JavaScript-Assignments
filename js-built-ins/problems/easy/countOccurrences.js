@@ -21,6 +21,15 @@
 
 function countOccurrences(arr) {
   // Your code here
+  const frequency = {};
+  for (const element of arr) {
+    if (frequency[element]) {
+      frequency[element]++;
+    } else {
+      frequency[element] = 1;
+    } 
+  }
+  return frequency;
 }
 
 module.exports = countOccurrences;

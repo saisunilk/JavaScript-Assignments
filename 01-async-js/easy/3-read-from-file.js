@@ -5,3 +5,20 @@
 // Try to do an expensive operation below the file read and see how it affects the output. 
 // Make the expensive operation more and more expensive and see how it affects the output. 
 
+function readFile() {
+    const fs = require('fs');
+    fs.readFile('file.txt', 'utf8', (err, data) => {
+        if (err) {
+            console.error(err);
+            return;
+        }
+        console.log(data);
+    }
+    );
+    // Expensive operation
+    let sum = 0;    
+    for (let i = 0; i < 1e9; i++) {
+        sum += i;
+    }
+    console.log('Expensive operation done');
+}

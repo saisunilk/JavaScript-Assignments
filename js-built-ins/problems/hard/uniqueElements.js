@@ -20,6 +20,13 @@
 
 function getUniqueElements(arr) {
   // Your code here
+  const uniqueElements = [];
+  for (const element of arr) {
+    if (!uniqueElements.includes(element)) {
+      uniqueElements.push(element);
+    }
+  }
+  return uniqueElements;
 }
 
 module.exports = getUniqueElements;
