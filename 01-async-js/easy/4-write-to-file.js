@@ -21,3 +21,5 @@ function writeToFile() {
     }
     console.log('Expensive operation done');
 }   
+
+writeToFile();

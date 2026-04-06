@@ -22,3 +22,5 @@ function readFile() {
     }
     console.log('Expensive operation done');
 }
+
+readFile();

@@ -30,3 +30,5 @@ function fileCleaner() {
         });
     });
 }
+
+fileCleaner();
